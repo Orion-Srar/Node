@@ -1,93 +1,25 @@
 const express = require('express');
-const fs = require('fs/promises');
-const path = require('path');
+require('dotenv').config();
+
+const userRouter = require('./router/user.router');
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
-app.get('/users', async (req, res) => {
-    const buffer = await fs.readFile(path.join(__dirname, 'DataBase', 'users.json'));
-    const users = JSON.parse(buffer.toString())
+app.use('/users', userRouter);
 
-    res.json(users);
-})
+app.use((err, req, res, next) => {
 
-app.get('/users/:userId', async (req, res) => {
-    const {userId} = req.params;
-
-    const buffer = await fs.readFile(path.join(__dirname, 'DataBase', 'users.json'));
-    const users = JSON.parse(buffer.toString());
-
-    const user = users.find((user) => user.id === +userId);
-
-    if (!user) {
-        return res.status(404).json('User is not found');
-    }
-
-    res.json(user)
-})
-
-app.post('/users', async (req, res) => {
-    const userInfo = req.body;
-
-    const buffer = await fs.readFile(path.join(__dirname, 'DataBase', 'users.json'));
-    const users = JSON.parse(buffer.toString());
-
-    users.push({
-        id: users[users.length - 1].id + 1,
-        name: userInfo.name,
-        age: userInfo.age
+    res.status(err.status || 500).json({
+        message: err.message || 'error',
+        status: err.status || 500
     });
 
-    await fs.writeFile(path.join(__dirname, 'DataBase', 'users.json'), JSON.stringify(users));
-
-    res.json('Created')
-})
-
-app.put('/users/:userId', async (req, res) => {
-    const {userId} = req.params;
-    const userInfo = req.body;
-
-    const buffer = await fs.readFile(path.join(__dirname, 'DataBase', 'users.json'));
-    const users = JSON.parse(buffer.toString());
-
-    const index = users.findIndex((user) => user.id === +userId);
-
-    if (index === -1) {
-        return res.status(404).json('User is not found');
-    }
-
-    users[index] = {...users[userId], ...userInfo};
-
-    await fs.writeFile(path.join(__dirname, 'DataBase', 'users.json'), JSON.stringify(users));
-
-    res.json('Updated')
-
-})
-
-app.delete('/users/:userId', async (req, res) => {
-    const {userId} = req.params;
-
-    const buffer = await fs.readFile(path.join(__dirname, 'DataBase', 'users.json'));
-    const users = JSON.parse(buffer.toString());
-
-    const index = users.findIndex((user) => user.id === +userId);
-
-    if (index === -1) {
-        return res.status(404).json('User is not found');
-    }
-
-    users.splice(index, 1);
-
-    await fs.writeFile(path.join(__dirname, 'DataBase', 'users.json'), JSON.stringify(users));
-
-    res.json('Updated')
-
-})
+});
 
 
-app.listen(5000, () => {
-    console.log('Server listen 5000');
+app.listen(process.env.PORT, () => {
+    console.log(`Server listen ${process.env.PORT}`);
 })
