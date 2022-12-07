@@ -1,14 +1,18 @@
 const express = require('express');
-require('dotenv').config();
+const mongoose = require("mongoose");
 
+const configs = require('./config/config')
 const userRouter = require('./router/user.router');
+const authRouter = require('./router/auth.router');
 
 const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+app.use('/auth', authRouter);
 app.use('/users', userRouter);
+
 
 app.use((err, req, res, next) => {
 
@@ -20,6 +24,13 @@ app.use((err, req, res, next) => {
 });
 
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server listen ${process.env.PORT}`);
+app.listen(configs.PORT,   async () => {
+    try {
+        await mongoose.connect(configs.MONGO_URL);
+        console.log('Connect');
+        console.log(`Server listen ${configs.PORT}`);
+    }catch (e) {
+        console.log(e)
+    }
+
 })

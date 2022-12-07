@@ -1,17 +1,33 @@
-const {fileServices} = require("../service");
+const {userService} = require("../service");
+const {userNormalizator} = require("../helper");
+const oauthService = require("../service/oauth.service");
 
 module.exports = {
 
     getAllUsers: async (req, res, next) => {
         try {
 
-            const users = await fileServices.reader();
+            const users = await userService.findByParams();
 
             res.json(users);
         } catch (e) {
             next(e);
         }
 
+    },
+
+    createUser: async (req, res, next) => {
+        try {
+            const hashPassword = await oauthService.hashPassword(req.body.password);
+
+            const userInfo = {...req.body, password: hashPassword};
+
+            await userService.create(userInfo);
+
+            res.status(201).json(userInfo);
+        } catch (e) {
+            next(e);
+        }
     },
 
     getUserById: async (req, res, next) => {
@@ -25,38 +41,14 @@ module.exports = {
 
     },
 
-    createUser: async (req, res, next) => {
-        try {
-            const userInfo = req.body;
-
-            const users = await fileServices.reader();
-
-            users.push({
-                id: users[users.length - 1].id + 1,
-                name: userInfo.name,
-                age: userInfo.age
-            });
-
-            await fileServices.writer(users);
-
-            res.status(201).json('Created');
-        } catch (e) {
-            next(e);
-        }
-    },
-
     updateUserById: async (req, res, next) => {
         try {
             const newUserInfo = req.body;
-            const {user, users} = req;
+            const {userId} = req.params;
 
-            const index = users.findIndex((u) => u.id === user.id);
+            const user = await userService.updateOne(userId, newUserInfo);
 
-            users[index] = {...users[index], ...newUserInfo};
-
-            await fileServices.writer(users);
-
-            res.json('Updated')
+            res.status(201).json(user)
         } catch (e) {
             next(e);
         }
@@ -66,18 +58,16 @@ module.exports = {
 
     deleteUserById: async (req, res, next) => {
         try {
-            const {user, users} = req;
 
-            const index = users.findIndex((u) => u.id === user.id);
+            const {userId} = req.params;
 
-            users.splice(index, 1);
-
-            await fileServices.writer(users);
+            await userService.delete(userId);
 
             res.sendStatus(204);
 
         } catch (e) {
             next(e)
         }
-    }
+    },
+
 }
