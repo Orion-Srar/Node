@@ -106,21 +106,6 @@ module.exports = {
         }
     },
 
-    isIdValid: (req, res, next) => {
-        try {
-            const {userId} = req.params;
-
-            if (userId < 24) {
-                throw new ApiError('Not valid ID', 400);
-            }
-
-            next();
-
-        } catch (e) {
-            next(e);
-        }
-    },
-
     userNormalizator: (req, res, next) => {
         try {
             let {name, email} = req.body;
