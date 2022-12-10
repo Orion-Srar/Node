@@ -4,5 +4,8 @@ module.exports = {
     MONGO_URL: process.env.MONGO_URL || 'mongodb+srv://andrii:andrii@cluster0.b65lbvm.mongodb.net/?retryWrites=true&w=majority',
 
     ACCESS_SECRET: process.env.ACCESS_SECRET || 'secretWorld',
-    REFRESH_SECRET: process.env.REFRESH_SECRET || 'secretRefreshWorld'
+    REFRESH_SECRET: process.env.REFRESH_SECRET || 'secretRefreshWorld',
+
+    NO_REPLY_EMAIL: process.env.NO_REPLY_EMAIL || 'boykoandriy93@gmail.com',
+    NO_REPLY_EMAIL_PASSWORD: process.env.NO_REPLY_EMAIL_PASSWORD || 'gqjeadxyjgmqtxuf',
 }

@@ -1,6 +1,8 @@
 const {userService} = require("../service");
 const {userNormalizator} = require("../helper");
 const oauthService = require("../service/oauth.service");
+const emailService = require("../service/mail.service");
+const {FORGOT_PASS} = require("../config/email-ection.enum");
 
 module.exports = {
 
@@ -32,6 +34,8 @@ module.exports = {
 
     getUserById: async (req, res, next) => {
         try {
+
+            await emailService.sendEmail('boykoandriy93@gmail.com', FORGOT_PASS)
 
             res.json(req.user)
 
