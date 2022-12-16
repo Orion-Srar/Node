@@ -4,20 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb478360-5086-437b-9754-f1628139898b" name="Changes" comment="hw5">
-      <change afterPath="$PROJECT_DIR$/config/email-ection.enum.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email-templates/contaner.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email-templates/forgot-pass.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email-templates/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email-templates/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/email-templates/welcome.pug" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/service/mail.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="fb478360-5086-437b-9754-f1628139898b" name="Changes" comment="send email">
+      <change afterPath="$PROJECT_DIR$/DataBase/ActionToken.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/token-action.enum.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/auth.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-templates/forgot-pass.pug" beforeDir="false" afterPath="$PROJECT_DIR$/email-templates/forgot-pass.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-templates/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/email-templates/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/auth.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth.middleware.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/auth.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/auth.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/mail.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/mail.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/service/oauth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/oauth.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +64,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.database.main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.1.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -100,7 +98,13 @@
       <workItem from="1670422977926" duration="3145000" />
       <workItem from="1670493460226" duration="20932000" />
       <workItem from="1670574613719" duration="6547000" />
-      <workItem from="1670657313945" duration="2705000" />
+      <workItem from="1670657313945" duration="3403000" />
+      <workItem from="1670746341908" duration="8000" />
+      <workItem from="1670746616494" duration="7347000" />
+      <workItem from="1670833098913" duration="9093000" />
+      <workItem from="1670930318243" duration="3197000" />
+      <workItem from="1671097033284" duration="15135000" />
+      <workItem from="1671178898926" duration="1005000" />
     </task>
     <task id="LOCAL-00001" summary="hw3">
       <created>1669540689309</created>
@@ -130,7 +134,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670509461044</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="send email">
+      <created>1670661075264</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1670661075264</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -153,7 +164,8 @@
     <MESSAGE value="hw3" />
     <MESSAGE value="hw4" />
     <MESSAGE value="hw5" />
-    <option name="LAST_COMMIT_MESSAGE" value="hw5" />
+    <MESSAGE value="send email" />
+    <option name="LAST_COMMIT_MESSAGE" value="send email" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
