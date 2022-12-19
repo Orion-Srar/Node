@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const configs = require('./config/config')
 const userRouter = require('./router/user.router');
 const authRouter = require('./router/auth.router');
+const {cronRunner} = require("./cron");
 
 const app = express();
 
@@ -29,6 +30,7 @@ app.listen(configs.PORT,   async () => {
         await mongoose.connect(configs.MONGO_URL);
         console.log('Connect');
         console.log(`Server listen ${configs.PORT}`);
+        cronRunner();
     }catch (e) {
         console.log(e)
     }

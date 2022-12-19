@@ -3,6 +3,7 @@ const emailService = require('../service/mail.service');
 const OAuth = require('../DataBase/OAuth');
 const ActionToken = require('../DataBase/ActionToken');
 const User = require('../DataBase/user');
+const OldPassword = require('../DataBase/OldPassword');
 const {WELCOME, FORGOT_PASS} = require("../config/email-ection.enum");
 const {FORGOT_PASSWORD} = require("../config/token-action.enum");
 const {FRONTEND_URL} = require("../config/config");
@@ -14,7 +15,7 @@ module.exports = {
 
             await emailService.sendEmail('boykoandriy93@gmail.com', WELCOME, {userName: user.name}),
 
-            await authService.comparePasswords(user.password, body.password);
+                await authService.comparePasswords(user.password, body.password);
 
             const tokenPair = authService.generateAccessTokenPair({id: user._id});
 
@@ -77,6 +78,7 @@ module.exports = {
 
             const actionToken = authService.generateActionToken(FORGOT_PASSWORD, {email: user.email});
             const forgotPassFEUrl = `${FRONTEND_URL}/password/new?token=${actionToken}`;
+            console.log(actionToken);
 
             await ActionToken.create({token: actionToken, _user_id: user._id, tokenType: FORGOT_PASSWORD});
             await emailService.sendEmail('boykoandriy93@gmail.com', FORGOT_PASS, {url: forgotPassFEUrl})
@@ -90,12 +92,14 @@ module.exports = {
     setPasswordAfterForgot: async (req, res, next) => {
         try {
 
-            console.log(req.user);
+            const {user, body} = req;
 
-            const hashPassword = await authService.hashPassword(req.body.password);
+            const hashPassword = await authService.hashPassword(body.password);
+
+            await OldPassword.create({_user_id: user._id, password: hashPassword})
 
             await ActionToken.deleteOne({token: req.get('Authorization')});
-            await User.updateOne({_id: req.user._id}, {password: hashPassword});
+            await User.updateOne({_id: user._id}, {password: hashPassword});
 
             res.json('ok');
         } catch (e) {
