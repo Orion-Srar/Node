@@ -12,10 +12,9 @@ module.exports = {
         try {
             const {user, body} = req;
 
-            await emailService.sendEmail('boykoandriy93@gmail.com', WELCOME),
+            await emailService.sendEmail('boykoandriy93@gmail.com', WELCOME, {userName: user.name}),
 
-
-                await authService.comparePasswords(user.password, body.password);
+            await authService.comparePasswords(user.password, body.password);
 
             const tokenPair = authService.generateAccessTokenPair({id: user._id});
 

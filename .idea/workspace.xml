@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fb478360-5086-437b-9754-f1628139898b" name="Changes" comment="send email">
-      <change afterPath="$PROJECT_DIR$/DataBase/ActionToken.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/token-action.enum.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-templates/layouts/main.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-templates/partials/footer.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-templates/partials/header.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-templates/views/forgot-pass.hbs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/email-templates/views/welcome.hbs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/auth.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/email-templates/forgot-pass.pug" beforeDir="false" afterPath="$PROJECT_DIR$/email-templates/forgot-pass.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/email-templates/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/email-templates/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/middleware/auth.middleware.js" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth.middleware.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/router/auth.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/auth.router.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-templates/contaner.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-templates/forgot-pass.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-templates/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/email-templates/welcome.pug" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/service/mail.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/mail.service.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/service/oauth.service.js" beforeDir="false" afterPath="$PROJECT_DIR$/service/oauth.service.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="hw4" />
+        <entry key="$PROJECT_DIR$" value="mail" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -104,7 +106,8 @@
       <workItem from="1670833098913" duration="9093000" />
       <workItem from="1670930318243" duration="3197000" />
       <workItem from="1671097033284" duration="15135000" />
-      <workItem from="1671178898926" duration="1005000" />
+      <workItem from="1671178898926" duration="8532000" />
+      <workItem from="1671438864785" duration="4791000" />
     </task>
     <task id="LOCAL-00001" summary="hw3">
       <created>1669540689309</created>
@@ -141,7 +144,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670661075264</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="send email">
+      <created>1671180014056</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1671180014056</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
