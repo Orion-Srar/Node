@@ -3,6 +3,8 @@ const {userNormalizator} = require("../helper");
 const oauthService = require("../service/oauth.service");
 const emailService = require("../service/mail.service");
 const {FORGOT_PASS} = require("../config/email-ection.enum");
+const User = require('../DataBase/user');
+
 
 module.exports = {
 
@@ -20,13 +22,8 @@ module.exports = {
 
     createUser: async (req, res, next) => {
         try {
-            const hashPassword = await oauthService.hashPassword(req.body.password);
-
-            const userInfo = {...req.body, password: hashPassword};
-
-            await userService.create(userInfo);
-
-            res.status(201).json(userInfo);
+            await User.createWithHashPassword(req.body);
+            res.status(201).json('Ok');
         } catch (e) {
             next(e);
         }
@@ -35,7 +32,7 @@ module.exports = {
     getUserById: async (req, res, next) => {
         try {
 
-            await emailService.sendEmail('boykoandriy93@gmail.com', FORGOT_PASS)
+            // await emailService.sendEmail('boykoandriy93@gmail.com', FORGOT_PASS)
 
             res.json(req.user)
 
