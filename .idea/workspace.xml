@@ -4,12 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb478360-5086-437b-9754-f1628139898b" name="Changes" comment="send email version two">
+    <list default="true" id="fb478360-5086-437b-9754-f1628139898b" name="Changes" comment="statics-methods">
+      <change afterPath="$PROJECT_DIR$/enum/sms-ection.enum-type.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/sms.service.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sms-template/sms-template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataBase/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/DataBase/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/regexp.enum.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/regexp.enum.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/auth.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/auth.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user.controller.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cron/removeOldPassword.js" beforeDir="false" afterPath="$PROJECT_DIR$/cron/removeOldPassword.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/enum/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/enum/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validator/user.validator.js" beforeDir="false" afterPath="$PROJECT_DIR$/validator/user.validator.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="cron" />
+        <entry key="$PROJECT_DIR$" value="static-metod" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -104,7 +111,7 @@
       <workItem from="1671097033284" duration="15135000" />
       <workItem from="1671178898926" duration="8532000" />
       <workItem from="1671438864785" duration="17490000" />
-      <workItem from="1671697797573" duration="3589000" />
+      <workItem from="1671697797573" duration="13893000" />
     </task>
     <task id="LOCAL-00001" summary="hw3">
       <created>1669540689309</created>
@@ -162,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671476989265</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="statics-methods">
+      <created>1671707059744</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671707059744</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,7 +201,8 @@
     <MESSAGE value="hw5" />
     <MESSAGE value="send email" />
     <MESSAGE value="send email version two" />
-    <option name="LAST_COMMIT_MESSAGE" value="send email version two" />
+    <MESSAGE value="statics-methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="statics-methods" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
