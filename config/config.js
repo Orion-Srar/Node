@@ -15,5 +15,10 @@ module.exports = {
 
     TWILIO_ACCOUNT_SID: process.env.TWILIO_ACCOUNT_SID || 'AC654bacf3f06a74760b8fba992de87c21',
     TWILIO_AUTH_TOKEN: process.env.TWILIO_AUTH_TOKEN || 'fab4525f761afd1b94437a8140970d9f',
-    TWILIO_SEND_SERVICE: process.env.TWILIO_SEND_SERVICE || 'MG740a4f56529b8335fabcf1771142c728'
+    TWILIO_SEND_SERVICE: process.env.TWILIO_SEND_SERVICE || 'MG740a4f56529b8335fabcf1771142c728',
+
+    S3_BUCKET_NAME: process.env.S3_BUCKET_NAME || 'boikoandriipetrovich',
+    S3_BUCKET_REGION: process.env.S3_BUCKET_REGION || 'us-east-1',
+    S3_ACCESS_KEY: process.env.S3_ACCESS_KEY,
+    S3_SECURITY_KEY: process.env.S3_SECURITY_KEY
 }

@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require("mongoose");
-
+const fileUpload = require('express-fileupload');
 const configs = require('./config/config')
 const userRouter = require('./router/user.router');
 const authRouter = require('./router/auth.router');
@@ -11,6 +11,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
+app.use(fileUpload(undefined));
 app.use('/auth', authRouter);
 app.use('/users', userRouter);
 

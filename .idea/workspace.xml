@@ -4,9 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb478360-5086-437b-9754-f1628139898b" name="Changes" comment="statics-methods">
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
+    <list default="true" id="30b5ee2d-8b68-496d-abb6-33aee0ee192a" name="Changes" comment="GIT">
+      <change afterPath="$PROJECT_DIR$/config/fileUpload.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware/file.middleware.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/s3.service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataBase/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/DataBase/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/user.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/controller/user.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/router/user.router.js" beforeDir="false" afterPath="$PROJECT_DIR$/router/user.router.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +33,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="static-metod" />
+        <entry key="$PROJECT_DIR$" value="twilio" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,149 +41,50 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2I2pSmU0YOAa41NskfDFFQRYzmn" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2JHOPhMgh3PX8WsdklhT4Yu3v8M" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.12.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.11.9&quot;,
-    &quot;js.last.introduce.type&quot;: &quot;CONST&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/boyko/IdeaProjects/Node/cron&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2022.1.3\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mongo&quot;
-    ]
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "js.last.introduce.type": "CONST",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\boyko\IdeaProjects\Node\cron" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\boyko\IdeaProjects\Node\config" />
-    </key>
-  </component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="fb478360-5086-437b-9754-f1628139898b" name="Changes" comment="" />
-      <created>1669389535457</created>
+      <changelist id="30b5ee2d-8b68-496d-abb6-33aee0ee192a" name="Changes" comment="" />
+      <created>1671731521480</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1669389535457</updated>
-      <workItem from="1669389536823" duration="605000" />
-      <workItem from="1669444943349" duration="5616000" />
-      <workItem from="1669533763942" duration="7493000" />
-      <workItem from="1669666022734" duration="2187000" />
-      <workItem from="1670230164506" duration="16095000" />
-      <workItem from="1670259587579" duration="7904000" />
-      <workItem from="1670314270683" duration="21549000" />
-      <workItem from="1670343416597" duration="7934000" />
-      <workItem from="1670408439170" duration="9260000" />
-      <workItem from="1670422977926" duration="3145000" />
-      <workItem from="1670493460226" duration="20932000" />
-      <workItem from="1670574613719" duration="6547000" />
-      <workItem from="1670657313945" duration="3403000" />
-      <workItem from="1670746341908" duration="8000" />
-      <workItem from="1670746616494" duration="7347000" />
-      <workItem from="1670833098913" duration="9093000" />
-      <workItem from="1670930318243" duration="3197000" />
-      <workItem from="1671097033284" duration="15135000" />
-      <workItem from="1671178898926" duration="8532000" />
-      <workItem from="1671438864785" duration="17490000" />
-      <workItem from="1671697797573" duration="16268000" />
+      <updated>1671731521480</updated>
+      <workItem from="1671731522747" duration="4676000" />
+      <workItem from="1671782630282" duration="10843000" />
     </task>
-    <task id="LOCAL-00001" summary="hw3">
-      <created>1669540689309</created>
+    <task id="LOCAL-00001" summary="GIT">
+      <created>1671731615378</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1669540689309</updated>
+      <updated>1671731615378</updated>
     </task>
-    <task id="LOCAL-00002" summary="hw3">
-      <created>1670235530849</created>
+    <task id="LOCAL-00002" summary="GIT">
+      <created>1671733412102</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1670235530849</updated>
+      <updated>1671733412102</updated>
     </task>
-    <task id="LOCAL-00003" summary="hw4">
-      <created>1670426129125</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1670426129125</updated>
-    </task>
-    <task id="LOCAL-00004" summary="hw5">
-      <created>1670509461044</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1670509461044</updated>
-    </task>
-    <task id="LOCAL-00005" summary="send email">
-      <created>1670661075264</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1670661075264</updated>
-    </task>
-    <task id="LOCAL-00006" summary="send email">
-      <created>1671180014056</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1671180014056</updated>
-    </task>
-    <task id="LOCAL-00007" summary="send email version two">
-      <created>1671443978675</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1671443978675</updated>
-    </task>
-    <task id="LOCAL-00008" summary="send email version two">
-      <created>1671476989264</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1671476989265</updated>
-    </task>
-    <task id="LOCAL-00009" summary="statics-methods">
-      <created>1671707059744</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1671707059744</updated>
-    </task>
-    <task id="LOCAL-00010" summary="statics-methods">
-      <created>1671722840031</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1671722840031</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,18 +102,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="gitignore" />
-    <MESSAGE value="hw2" />
-    <MESSAGE value="hw3" />
-    <MESSAGE value="hw4" />
-    <MESSAGE value="hw5" />
-    <MESSAGE value="send email" />
-    <MESSAGE value="send email version two" />
-    <MESSAGE value="statics-methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="statics-methods" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
+    <MESSAGE value="GIT" />
+    <option name="LAST_COMMIT_MESSAGE" value="GIT" />
   </component>
 </project>

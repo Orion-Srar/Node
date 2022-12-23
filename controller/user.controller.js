@@ -1,9 +1,6 @@
 const {userService} = require("../service");
-const {userNormalizator} = require("../helper");
-const oauthService = require("../service/oauth.service");
-const emailService = require("../service/mail.service");
-const {FORGOT_PASS} = require("../config/email-ection.enum");
 const User = require('../DataBase/user');
+const s3Service = require('../service/s3.service');
 
 
 module.exports = {
@@ -68,6 +65,18 @@ module.exports = {
 
         } catch (e) {
             next(e)
+        }
+    },
+
+    uploadAvatar: async (req, res, next) => {
+        try {
+            const updateData = await s3Service.uploadPublicFile(req.files.avatar, 'user', req.user._id);
+
+            const updateUser = await User.findByIdAndUpdate(req.user._id, {avatar: updateData.Location}, {new: true});
+
+            res.status(201).json(updateUser);
+        } catch (e) {
+            next(`this is wrong ${e}`)
         }
     },
 
